@@ -314,5 +314,10 @@ app.get('/deleteProduct/:id', (req, res) => {
     });
 });
 
+// Fallback route for unmatched paths (to prevent 502 errors)
+app.use((req, res) => {
+    res.status(404).render('404', { user: req.session.user });
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
