@@ -22,7 +22,7 @@ const connection = mysql.createConnection({
     port: 3307,
     user: 'C237SupermarketApp_listtotal',
     password: '10e1daf341590ea7964e3a93250c76154e399d1d',
-    database: 'C237SupermarketApp_listtotal'
+    database: 'c237_supermarketdb'
   });
 
 connection.connect((err) => {
