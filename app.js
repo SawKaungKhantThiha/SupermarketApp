@@ -18,11 +18,11 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 const connection = mysql.createConnection({
-    host: '6p3ll0.h.filess.io',
+    host: 'mar6xe.h.filess.io',
     port: 3307,
-    user: 'C237database_mouseheavy',
-    password: '15786728784611dd056e67718d753bc755348ada',
-    database: 'C237database_mouseheavy'
+    user: 'C237SupermarketApp_listtotal',
+    password: '10e1daf341590ea7964e3a93250c76154e399d1d',
+    database: 'C237SupermarketApp_listtotal'
   });
 
 connection.connect((err) => {
@@ -312,11 +312,6 @@ app.get('/deleteProduct/:id', (req, res) => {
             res.redirect('/inventory');
         }
     });
-});
-
-// Fallback route for unmatched paths (to prevent 502 errors)
-app.use((req, res) => {
-    res.status(404).render('404', { user: req.session.user });
 });
 
 const PORT = process.env.PORT || 3000;
